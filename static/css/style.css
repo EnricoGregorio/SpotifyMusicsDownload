@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+:root {
+    --cor0: #D1CFC0;
+    --cor1: #1F1F1F;
+    --cor2: #F76F53;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Domine', 'Times New Roman', Times, serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor0);
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#dark-mode {
+    width: 60px;
+    margin: 20px;
+    padding: 10px 20px;
+    color: var(--cor0);
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 5px;
+}
+
+#dark-mode:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-color: var(--cor2);
+    color: var(--cor0);
+}
+
+#light-mode {
+    display: none;
+    width: 60px;
+    margin: 20px;
+    padding: 10px 20px;
+    color: var(--cor1);
+    background-color: var(--cor0);
+    border: none;
+    border-radius: 5px;
+}
+
+#light-mode:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-color: var(--cor2);
+    color: var(--cor0);
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1,
+form {
+    text-align: center;
+    color: var(--cor1);
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    height: 20px;
+    max-width: 500px;
+    padding: 5px;
+    font-size: 1em;
+    border: none;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 1.1em;
+    background-color: var(--cor2);
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background-color: var(--cor1);
+    color: var(--cor0);
+}
+
+p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#loading {
+    display: none;
+    margin-top: 15px;
+}

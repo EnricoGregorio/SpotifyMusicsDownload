@@ -1,0 +1,19 @@
+# Ignorar a virtualenv
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos temporários/ambiente
+.env
+.DS_Store
+
+# Pasta de músicas baixadas
+musics/
+
+# Outros arquivos opcionais
+*.log

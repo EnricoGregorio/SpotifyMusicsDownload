@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Enrico Sobrinho Gregório">
+    <meta name="description" content="Baixe suas músicas, álbuns e playlists favoritas do Spotify.">
+    <meta name="keywords" content="Spotify, baixar, download, álbuns, músicas, playlists">
+    <title>Baixe músicas do Spotify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = '/css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = '/favicon/favicon.ico') }}" type="image/x-icon">
+    <script src="{{ url_for('static', filename = '/js/script.js') }}"></script>
+    <script src="https://kit.fontawesome.com/f156855bd0.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page">
+    <main>
+        <div id="botoes">
+            <button id="dark-mode" onclick="changeBgColor('dark')"><i class="fa-solid fa-moon"></i></button>
+            <button id="light-mode" onclick="changeBgColor('light')"><i class="fa-solid fa-sun"></i></button>
+        </div>
+        <div id="principal">
+            <img src="{{ url_for('static', filename = '/imgs/logo.png') }}" alt="Logo do Spotify, com a cor laraja">
+            <h1>Baixe suas músicas, álbuns e playlists favoritas!</h1>
+        </div>
+        <form action="" method="post" onsubmit="showLoadingMessage()">
+            <label for="link">Informe o link da música, álbum ou playlist: </label>
+            <input type="text" name="link" id="link" placeholder="URL do Spotify" required>
+            <input type="submit" value="Baixar">
+        </form>
+
+        <p id="loading">Aguarde... Baixando música(s)...</p>
+
+        {% if resultado %}
+        <p id="message">{{ resultado|safe }}</p>
+        {% endif %}
+
+    </main>
+</body>
+
+</html>
