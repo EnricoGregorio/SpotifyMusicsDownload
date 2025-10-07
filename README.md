@@ -22,6 +22,7 @@ Este projeto é uma aplicação web simples feita com **Python + Flask** que per
 - Python 3.8 ou superior;
 - pip;
 - O spotDL precisa do ffmpeg instalado no sistema. Certifique-se de que ele está disponível no PATH;
+- Não se esqueça de verificar se o SpotDL está atualizado;
 - Git (para clonar o projeto).
 
 ---
